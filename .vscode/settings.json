@@ -3,6 +3,6 @@
   "editor.tabSize": 2,
   //失去焦点后自动保存
   "files.autoSave": "onFocusChange",
-  "editor.lineNumbers": true,
-  "source.organizeImports": true 
+  "editor.lineNumbers": "on",
+  "source.organizeImports": true
 }
