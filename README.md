@@ -58,3 +58,15 @@ assistech
 # 小知识
 
 `_`开头的scss文件不能被编译成单独的css文件，导入时可以省略`_`
+
+# 测试框架 
+
+## jest 通用测试框架
+
+[jest官网](https://jestjs.io/)
+
+## react测试框架
+
+[React Testing Library](https://testing-library.com/docs/react-testing-library/intro)
+
+[jest-dom](https://github.com/testing-library/jest-dom)
