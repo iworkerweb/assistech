@@ -9,7 +9,7 @@ test('test to be true or false', () => {
 })
 
 test('test number', () => {
-  expect(4).toBeGreaterThan(3)
+  expect(4).toBeGreaterThan(2)
   expect(2).toBeLessThan(3)
 })
 
