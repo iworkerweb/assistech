@@ -118,3 +118,25 @@ npm link assistech
 
 ```
 
+# Npm的主要功能
+
++ 下载别人编写的第三方包到本地使用
++ 下载并安装别人编写的命令行程序到本地使用
++ 将自己编写的包或者命令行程序上传到npm服务器
+
+> 登录npm
+
+1. npm whoami
+2. npm config ls 要保证 metrics-registry = "https://registry.npmjs.org/"
+3. npm adduser
+
+# 发布到npm
+
+1. 语义化版本号
+2. 精简package.json文件依赖
+3. peerDependencies
+
+# 添加发布和commit前检测
+
+1. 
+2. 
