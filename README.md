@@ -154,3 +154,4 @@ npm link assistech
 
 1. git 需升级，不然husky没办法使用
 2. compact folders设置，单个文件夹不折叠
+3. husky失效，更新node和git，然后npm rebuild
