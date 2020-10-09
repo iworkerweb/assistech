@@ -4,7 +4,7 @@ import Button from './button'
 
 test('our first react test case', () => {
   const wrapper = render(<Button>nice</Button>)
-  const ele = wrapper.queryByText('nice')
+  const ele = wrapper.queryByText('test husky')
   expect(ele).toBeTruthy()
   expect(ele).toBeInTheDocument()
 })
