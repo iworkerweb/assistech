@@ -1,6 +1,33 @@
+# 安装使用
+
+> npm install assistech --save
+
++ 注意问题
+git版本 >= 2.13.0, node版本 >= 10.0, react >= 16.8.0 , react-dom >= 16.8.0
+
+# 相关依赖介绍
+
+1. react[官网](https://reactjs.org/)
+
+   本组件库所有组件均采用hooks编写
+
+2. storybook[官网](https://storybook.js.org/)
+   
+   storybook顾名思义"故事书",每个组件都有对应的"故事"来说明怎么使用
+
+3. @testing-library/react[官网](https://testing-library.com/)
+
+   react组件的测试框架
+
+4. jest[官网](https://jestjs.io/docs/en/getting-started)
+   
+   通用测试框架
+
+5. typescript[官网](https://www.typescriptlang.org/)
+
+   本组件库采用ts编写
 
 # 文件结构
-
 
 ```js
 assistech
@@ -45,6 +72,7 @@ assistech
     #dc3545
     #17a2b8
     ```
+
 # 字体系统
 
 # 表单
@@ -155,3 +183,4 @@ npm link assistech
 1. git 需升级，不然husky没办法使用
 2. compact folders设置，单个文件夹不折叠
 3. husky失效，更新node和git，然后npm rebuild
+
