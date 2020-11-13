@@ -1,18 +1,50 @@
-test('test common matcher', () => {
-  expect( 2 + 2 ).toBe(4)
-  expect(2 + 2).not.toBe(5)
-})
+function compose(...funcs) {
+  if (funcs.length === 0) {
+    return arg => arg;
+  }
 
-test('test to be true or false', () => {
-  expect(1).toBeTruthy()
-  expect(0).toBeFalsy()
-})
+  if (funcs.length === 1) {
+    return funcs[0];
+  }
 
-test('test number', () => {
-  expect(4).toBeGreaterThan(2)
-  expect(2).toBeLessThan(3)
-})
+  return funcs.reduce(function reducer(a, b) {
+    return function nextWrapper(...args) {
+      return a(b(...args));
+    };
+  });
+}
 
-test('test object', () => {
-  expect({name: 'viking'}).toEqual({name: 'viking'})
-})
+function next(action) {
+  console.log("[next]", action);
+}
+
+function fooMiddleware(next) {
+  console.log("[fooMiddleware] trigger");
+  return function next_from_foo(action) {
+    console.log("[fooMiddleware] before next");
+    next(action);
+    console.log("[fooMiddleware] after next");
+  };
+}
+
+function barMiddleware(next) {
+  console.log("[barMiddleware] trigger");
+  return function next_from_bar(action) {
+    console.log("[barMiddleware] before next");
+    next(action);
+    console.log("[barMiddleware] after next");
+  };
+}
+
+function bazMiddleware(next) {
+  console.log("[bazMiddleware] trigger");
+  return function next_from_baz(action) {
+    console.log("[bazMiddleware] before next");
+    next(action);
+    console.log("[bazMiddleware] after next");
+  };
+}
+
+const chain = compose(fooMiddleware, barMiddleware, bazMiddleware);
+const nextChain = chain(next);
+nextChain("{data}");

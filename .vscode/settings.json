@@ -4,5 +4,8 @@
   //失去焦点后自动保存
   "files.autoSave": "onFocusChange",
   "editor.lineNumbers": "on",
-  "source.organizeImports": true
+  "source.organizeImports": true,
+  "git.autofetch": true,
+  "editor.fontSize": 14,
+
 }

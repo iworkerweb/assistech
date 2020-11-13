@@ -3,8 +3,8 @@ import {render} from '@testing-library/react'
 import Button from './button'
 
 test('our first react test case', () => {
-  const wrapper = render(<Button>nice</Button>)
-  const ele = wrapper.queryByText('test husky')
+  const wrapper = render(<Button>Nice</Button>)
+  const ele = wrapper.queryByText('Nice')
   expect(ele).toBeTruthy()
   expect(ele).toBeInTheDocument()
 })
